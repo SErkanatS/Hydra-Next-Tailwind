@@ -1,113 +1,106 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Card from "./card";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+      <section className=" flex items-center justify-between">
+        <div className=" w-1/2">
+          <h1 className="text-[46px] font-extrabold"> <span className="text-transparent  bg-clip-text bg-gradient-to-r from-left to-right">Dive</span> Into The Depths <br /> Of <span className=" text-transparent bg-clip-text bg-gradient-to-r from-left to-right">Virtual Reality</span></h1>
+          <p className=" pt-[36px] pb-[66px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .</p>
+          <div className="flex">
+            <div className="flex flex-col justify-center">
+              <button className=' uppercase py-4 px-9 rounded-full font-bold bg-gradient-to-r from-left to-right text-primary'>BUILD YOUR WORLD</button>
+            </div>
+            <Image src={'/arrow-small-right.svg'} height={48} width={100} alt="arrow" />
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div >
+          <div className=" relative rounded-bl-[240px] rounded-tr-[100px] rounded-tl-[100px] rounded-br-[100px] shadow-2xl shadow-black  h-[426px] w-[490px] overflow-hidden">
+            <Image src={'/main-section.png'} alt="photo" fill className=" " />
+          </div>
+        </div>
+      </section>
+      <section className="py-[88px]">
+        <div className=" flex justify-between  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] rounded-full p-12 shadow-2xl shadow-black">
+          <div className=" flex items-center gap-2">
+            <Image src={'/location.svg'} height={65} width={65} alt="image" />
+            <div>
+              <h1 className=" font-bold text-xl">Pay Us a Visit</h1>
+              <p className=" text-xs">Union St, Seattle, WA 98101, United States</p>
+            </div>
+          </div>
+          <div className=" h-[120] w-0 border-[1px] border-white border-solid"></div>
+          <div className=" flex items-center gap-2">
+            <Image src={'/phone.svg'} height={65} width={65} alt="image" />
+            <div>
+              <h1 className=" font-bold text-xl">Give Us a Call</h1>
+              <p className=" text-xs">(110) 1111-1010</p>
+            </div>
+          </div>
+          <div className=" h-[120] w-0 border-[1px] border-white border-solid"></div>
+          <div className=" flex items-center gap-2">
+            <Image src={'/mail.svg'} height={65} width={65} alt="image" />
+            <div>
+              <h1 className=" font-bold text-xl">Send Us a Message</h1>
+              <p className=" text-xs">Contact@HydraVTech.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className=" grid grid-cols-2 grid-rows-auto place-content-center">
+          <div className=" text-4xl h-min">
+            <h1 className=" text-5xl font-extrabold">INTRODUCTION</h1>
+            <div className=" flex font-normal items-center gap-8  ">
+              <p>TO HYDRA VR</p>
+              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" />
+            </div>
+          </div>
+          <div className="  h-min">
+            <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+          </div>
+          <div className="">
+            <div className=" relative rounded-bl-[100px] rounded-tr-[100px] rounded-tl-[240px] rounded-br-[240px] shadow-2xl shadow-black  h-[557px] w-[524px] overflow-hidden">
+              <Image src={'/nigger-vr.png'} alt="photo" fill />
+            </div>
+          </div>
+          <div className=" flex flex-col justify-around">
+            <div className=" text-4xl">
+              <h1 className=" text-5xl font-extrabold py-2">ABOUT</h1>
+              <p>HYDRA VR</p>
+            </div>
+            <p>Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
+              urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
+              dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
+              Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet
+              sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
+              etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet
+              cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
+              retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
+              n tempor.</p>
+            <div>
+              <button className=' uppercase py-4 px-9 rounded-full font-bold bg-gradient-to-r from-left to-right text-primary'>LET’S GET IN TOUCH</button>
+            </div>
+          </div>
+          <div className=" text-4xl h-min pt-12 ">
+            <h1 className=" text-5xl font-extrabold">WHY BUILD</h1>
+            <div className=" flex font-normal items-center gap-8  ">
+              <p>WITH HYDRA?</p>
+              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" />
+            </div>
+          </div>
+          <div className="pt-12 h-min">
+            <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+          </div>
+        </div>
+      </section>
+      <section className=" flex justify-between pt-20">
+        <Card img={'/card-4.png'} title="simulation" body={'Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'} button='Try it now'/>
+        <Card img={'/card-3.png'} title="education" body={'Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'} button='Try it now'/>
+        <Card img={'/card-2.png'} title="self care" body={'Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'} button='Try it now'/>
+        <Card img={'/card-1.png'} title="outdoor" body={'Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.'} button='Try it now'/>
+      </section>
     </main>
   )
 }
