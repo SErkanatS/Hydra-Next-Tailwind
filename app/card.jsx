@@ -5,7 +5,7 @@ function Card(props) {
   return (
     <div className='flex flex-col w-[310px] items-center gap-3 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] p-12 rounded-[40px] shadow-2xl shadow-black '>
         <div className=' relative rounded-full border-[#0e0e0e52] border-8 w-[190px] h-[190px] overflow-hidden'>
-            <Image src={props.img} fill alt='card'/>
+            <Image src={props.img} fill sizes='100' alt='card' blurDataURL={props.img }/>
         </div>
         <p className=' uppercase font-extrabold text-2xl'>{props.title}</p>
         <p className='text-center text-[12px]'>{props.body}</p>
