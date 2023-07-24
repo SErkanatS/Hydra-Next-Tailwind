@@ -88,8 +88,8 @@ export default function Home() {
             <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
           </div>
           <div className=" col-span-2 py-9 lg:py-0 lg:col-span-1">
-            <div className=" relative rounded-bl-[100px] rounded-tr-[100px] rounded-tl-[240px] rounded-br-[240px] shadow-2xl shadow-black  h-[500px] lg:h-[557px] w-[450px] lg:w-[524px] overflow-hidden">
-              <Image src={'/section_2.png'} alt="photo" fill blurDataURL={'/section_2.png'} sizes="100" />
+              <div className=" relative rounded-bl-[100px] rounded-tr-[100px] rounded-tl-[240px] rounded-br-[240px] shadow-2xl shadow-black h-0 pb-1/3 pt-2/3 lg:mr-6 m-10 overflow-hidden">
+              <img src={'/section_2.png'} alt="photo" className=" absolute inset-0 w-full h-full object-cover"/>
             </div>
           </div>
           <div className=" flex flex-col justify-around col-span-2 lg:col-span-1 gap-9">
@@ -195,10 +195,10 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <section className=" mt-[10vh] py-6 px-[107px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#403A5F] to-[#211E2E] shadow-inner rounded-[40px] w-[90vw] mx-auto" id="contact">
-        <div className=" flex flex-col items-center gap-8 text-4xl p-16 text-center">
+      <section className=" mt-[10vh] py-6 px-6 lg:px-[107px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#403A5F] to-[#211E2E] shadow-inner rounded-[40px] w-[90vw] mx-auto" id="contact">
+        <div className=" flex flex-col items-center gap-8 text-4xl lg:p-16 text-center overflow-hidden">
           <span className=" font-extrabold ">JOIN HYDRA</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="414" height="2" viewBox="0 0 414 2" fill="none">
+          <svg  className="" xmlns="http://www.w3.org/2000/svg" width="414" height="2" viewBox="0 0 414 2" fill="none">
             <path d="M0 1H414" stroke="url(#paint0_linear_13_46)" />
             <defs>
               <linearGradient id="paint0_linear_13_46" x1="414" y1="1.00238" x2="0" y2="1" gradientUnits="userSpaceOnUse">
@@ -209,7 +209,7 @@ export default function Home() {
               </linearGradient>
             </defs>
           </svg>
-          <span>Let’s Build Your VR Experience</span>
+          <span className=" pb-6 lg:pb-0">Let’s Build Your VR Experience</span>
         </div>
         <div className=" grid grid-cols-2 grid-rows-[4] gap-3 ">
           <input type="text" placeholder="First Name" className=" col-span-2 lg:col-span-1 bg-transparent outline-none py-7 px-10 rounded-[40px] border-2 border-white h-[72px]" />
@@ -219,7 +219,7 @@ export default function Home() {
           <input type="text" placeholder="Subject" className=" col-span-2 bg-transparent outline-none py-7 px-10 rounded-[40px] border-2 border-white h-[72px]" />
           <textarea name="something" placeholder="Tell Us Something..." id="something" cols="30" rows="10" className=" col-span-2 bg-transparent outline-none py-7 px-10 rounded-[40px] border-2 border-white resize-none"></textarea>
         </div>
-        <div className="flex flex-col justify-center items-center py-16">
+        <div className="flex flex-col justify-center items-center pt-6 lg:py-16">
           <button className=' uppercase py-4 px-9 rounded-full w-[214px] font-bold bg-gradient-to-r from-left to-right text-primary'>SEND TO HYDRA</button>
         </div>
       </section>
