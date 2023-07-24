@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className= {`bg-violet px-20 py-14 ${montserrat.variable} font-montserrat`}>
+      <body className= {`bg-violet px-4 lg:px-20 py-14 ${montserrat.variable} font-montserrat scroll-smooth `}>
         <Navbar />
         {children}
       </body>
