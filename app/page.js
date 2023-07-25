@@ -29,23 +29,12 @@ export default function Home() {
     }
   ]
 
-  const [index, setIndex] = useState(0)
-
-  const next = () => {
-    index == 3 && setIndex(-1)
-    setIndex((prev) => prev + 1)
-  }
-
-  const previous = () => {
-    index == 0 && setIndex(3)
-    setIndex((prev) => prev - 1)
-  }
 
   return (
-    <main className="">
+    <main>
       <section className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-10 ">
         <div className=" lg:w-1/2">
-          <h1 className=" lg:text-[#fff] text-2xl md:text-4xl font-extrabold text-center lg:text-left lg:text-[46px] "> <span className="text-transparent  bg-clip-text bg-gradient-to-r from-left to-right ">Dive</span> Into The Depths <br /> Of <span className=" text-transparent bg-clip-text bg-gradient-to-r from-left to-right">Virtual Reality</span></h1>
+          <h1 className=" text-2xl md:text-4xl font-extrabold text-center lg:text-white lg:text-left lg:text-[46px] "> <span className="text-transparent  bg-clip-text bg-gradient-to-r from-left to-right ">Dive</span> Into The Depths <br /> Of <span className=" text-transparent bg-clip-text bg-gradient-to-r from-left to-right">Virtual Reality</span></h1>
           <p className=" hidden lg:block pt-[36px] pb-[66px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .</p>
           <div className="flex justify-center lg:justify-start mt-10 lg:mt-0">
             <div className="flex flex-col justify-center">

@@ -37,14 +37,14 @@ function Navbar() {
         </div>
       </nav>
       {isOpen && (
-        <div className='lg:hidden flex gap-10 flex-col pb-[112px]'>
-          <ul className='flex items-center gap-10 flex-col'>
+        <div className='lg:hidden flex gap-[40px] flex-col pb-[112px]'>
+          <ul className='flex items-center gap-[40px] flex-col'>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Technologies</a></li>
             <li><a href="#">How to</a></li>
           </ul>
-          <div className='flex justify-around gap-10 flex-col w-fit mx-auto'>
+          <div className='flex justify-around gap-[40px] flex-col w-fit mx-auto'>
             <a href="#contact">
               <button className=' uppercase border-solid border-2 border-white py-4 px-9 rounded-full font-bold'>Contact Us</button>
             </a>
