@@ -141,9 +141,8 @@ export default function Home() {
         <div className=" hidden xl:flex lg:justify-between ">
           {
             cards.map((item) => (
-              <div className="">
+              <div key={item.number}>
                 <Card img={`/card-${item.number}.png`} title={item.title} body={item.body} button='Try it now' />
-
               </div>
             ),)
           }
