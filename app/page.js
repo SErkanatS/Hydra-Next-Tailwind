@@ -33,7 +33,7 @@ export default function Home() {
     <main className="">
       <section className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-10 ">
         <div className=" lg:w-1/2">
-          <h1 className=" lg:text-[#fff] text-4xl font-extrabold text-center lg:text-left lg:text-[46px] "> <span className="text-transparent  bg-clip-text bg-gradient-to-r from-left to-right ">Dive</span> Into The Depths <br /> Of <span className=" text-transparent bg-clip-text bg-gradient-to-r from-left to-right">Virtual Reality</span></h1>
+          <h1 className=" lg:text-[#fff] text-2xl md:text-4xl font-extrabold text-center lg:text-left lg:text-[46px] "> <span className="text-transparent  bg-clip-text bg-gradient-to-r from-left to-right ">Dive</span> Into The Depths <br /> Of <span className=" text-transparent bg-clip-text bg-gradient-to-r from-left to-right">Virtual Reality</span></h1>
           <p className=" hidden lg:block pt-[36px] pb-[66px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .</p>
           <div className="flex justify-center lg:justify-start mt-10 lg:mt-0">
             <div className="flex flex-col justify-center">
@@ -43,14 +43,15 @@ export default function Home() {
           </div>
         </div>
         <div >
-          <div className=" relative rounded-bl-[240px] rounded-tr-[100px] rounded-tl-[100px] rounded-br-[100px] shadow-2xl shadow-black  h-[426px]  w-[450px] lg:w-[490px] overflow-hidden">
+          <div className=" relative rounded-bl-[240px] rounded-tr-[100px] rounded-tl-[100px] rounded-br-[100px] shadow-2xl shadow-black 
+           h-[284px] md:h-[355px] lg:h-[425px] w-[300px] md:w-[375px] lg:w-[480px] overflow-hidden ">
             <Image src={'/main-section.png'} alt="photo" fill blurDataURL={'/main-section.png'} sizes="100" />
           </div>
         </div>
       </section>
-      <section className="py-[88px]">
-        <div className=" flex justify-between  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] rounded-full p-12 shadow-2xl shadow-black overflow-x-scroll w-[80vw] mx-auto snap-x snap-mandatory no-scrollbar ">
-          <div className=" flex items-center gap-2 min-w-[140%] lg:min-w-0 snap-center justify-center">
+      <section className=" py-12 lg:py-20">
+        <div className=" flex justify-between  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] rounded-full py-6 px-12 md:p-12 shadow-2xl shadow-black overflow-x-scroll w-[80vw] mx-auto snap-x snap-mandatory no-scrollbar ">
+          <div className=" flex items-center gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%]  lg:min-w-0 snap-center justify-center">
             <Image src={'/location.svg'} height={65} width={65} alt="image" blurDataURL={'/location.svg'} />
             <div>
               <h1 className=" font-bold text-xl">Pay Us a Visit</h1>
@@ -58,7 +59,7 @@ export default function Home() {
             </div>
           </div>
           <div className=" hidden lg:block h-[120] w-0 border-[1px] border-white border-solid"></div>
-          <div className=" flex items-center  gap-2 min-w-[140%] lg:min-w-0 snap-center justify-center">
+          <div className=" flex items-center  gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%] lg:min-w-0 snap-center justify-center">
             <Image src={'/phone.svg'} height={65} width={65} alt="image" blurDataURL={'/phone.svg'} />
             <div>
               <h1 className="  font-bold text-xl">Give Us a Call</h1>
@@ -66,7 +67,7 @@ export default function Home() {
             </div>
           </div>
           <div className=" hidden lg:block h-[120] w-0 border-[1px] border-white border-solid"></div>
-          <div className=" flex items-center gap-2 min-w-[140%] lg:min-w-0 snap-center justify-center">
+          <div className=" flex items-center gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%] lg:min-w-0 snap-center justify-center">
             <Image src={'/mail.svg'} height={65} width={65} alt="image" />
             <div>
               <h1 className=" font-bold text-xl">Send Us a Message</h1>
@@ -76,9 +77,9 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className=" grid grid-cols-2 grid-rows-auto place-content-center">
+        <div className=" grid grid-cols-2 grid-rows-auto place-content-center place-items-center lg:place-items-start">
           <div className=" text-4xl h-min col-span-2 lg:col-span-1 text-center lg:text-left lg:text-white">
-            <h1 className=" text-5xl font-extrabold">INTRODUCTION</h1>
+            <h1 className=" text-3xl lg:text-5xl font-extrabold">INTRODUCTION</h1>
             <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start">
               <p>TO HYDRA VR</p>
               <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" blurDataURL={'/big-arrow-right.svg'} className=" hidden lg:block" />
@@ -88,8 +89,10 @@ export default function Home() {
             <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
           </div>
           <div className=" col-span-2 py-9 lg:py-0 lg:col-span-1">
-              <div className=" relative rounded-bl-[100px] rounded-tr-[100px] rounded-tl-[240px] rounded-br-[240px] shadow-2xl shadow-black h-0 pb-1/3 pt-2/3 lg:mr-6 m-10 overflow-hidden">
-              <img src={'/section_2.png'} alt="photo" className=" absolute inset-0 w-full h-full object-cover"/>
+            <div className=" relative md:rounded-bl-[100px] md:rounded-tr-[100px] md:rounded-tl-[240px] md:rounded-br-[240px] 
+            shadow-2xl shadow-black rounded-bl-[50px] rounded-tr-[50px] rounded-tl-[120px] rounded-br-[120px]
+            md:h-[446px] md:w-[419px] h-[272px] w-[256px]  overflow-hidden ">
+              <Image src={'/section_2.png'} alt="photo" fill blurDataURL={'/section_2.png'} sizes="100" />
             </div>
           </div>
           <div className=" flex flex-col justify-around col-span-2 lg:col-span-1 gap-9">
@@ -198,7 +201,7 @@ export default function Home() {
       <section className=" mt-[10vh] py-6 px-6 lg:px-[107px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#403A5F] to-[#211E2E] shadow-inner rounded-[40px] w-[90vw] mx-auto" id="contact">
         <div className=" flex flex-col items-center gap-8 text-4xl lg:p-16 text-center overflow-hidden">
           <span className=" font-extrabold ">JOIN HYDRA</span>
-          <svg  className="" xmlns="http://www.w3.org/2000/svg" width="414" height="2" viewBox="0 0 414 2" fill="none">
+          <svg className="" xmlns="http://www.w3.org/2000/svg" width="414" height="2" viewBox="0 0 414 2" fill="none">
             <path d="M0 1H414" stroke="url(#paint0_linear_13_46)" />
             <defs>
               <linearGradient id="paint0_linear_13_46" x1="414" y1="1.00238" x2="0" y2="1" gradientUnits="userSpaceOnUse">
