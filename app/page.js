@@ -44,7 +44,7 @@ export default function Home() {
         <div >
           <div className=" relative rounded-bl-[240px] rounded-tr-[100px] rounded-tl-[100px] rounded-br-[100px] shadow-2xl shadow-black 
            h-[284px] md:h-[355px] lg:h-[425px] w-[300px] md:w-[375px] lg:w-[480px] overflow-hidden ">
-            <Image src={'/main-section.png'} alt={"photo"} fill blurDataURL={'/main-section.png'} sizes="100" />
+            <Image src={'/mika.jpg'} alt={"photo"} fill blurDataURL={'/mika.jpg'} sizes="100" />
           </div>
         </div>
       </section>
