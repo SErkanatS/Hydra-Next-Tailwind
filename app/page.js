@@ -136,7 +136,7 @@ export default function Home() {
             ),)
           }
         </div>
-        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll  w-full">
           {
             <>
               <div className=" flex py-4 min-w-[100%]  snap-center justify-center">
@@ -180,7 +180,7 @@ export default function Home() {
             <Image src={'/partner-1.png'} width={282} height={282} onBlur={'/partner-1.png'} sizes="100" />
           </div>
         </div>
-        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-full">
           <div className=" relative flex py-4 min-w-[100%] snap-center justify-center">
             <Image src={'/partner-4.png'} width={174} height={174} onBlur={'/partner-4.png'} sizes="100" />
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-full">
           <div className=" flex py-4 min-w-[100%] snap-center justify-center">
             <div className=" flex flex-col items-center">
               <Image src={'/01.svg'} width={198} height={198} />
@@ -278,7 +278,7 @@ export default function Home() {
         </div>
       </section>
       <section className=" mt-[10vh] py-6 px-6 lg:px-[107px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#403A5F] to-[#211E2E] shadow-inner rounded-[40px] w-[90vw] mx-auto" id="contact">
-        <div className=" flex flex-col items-center gap-8 text-4xl lg:p-16 text-center overflow-hidden">
+        <div className=" flex flex-col items-center gap-2 lg:gap-8 text-xl lg:text-4xl lg:p-16 text-center overflow-hidden">
           <span className=" font-extrabold ">JOIN HYDRA</span>
           <svg className="" xmlns="http://www.w3.org/2000/svg" width="414" height="2" viewBox="0 0 414 2" fill="none">
             <path d="M0 1H414" stroke="url(#paint0_linear_13_46)" />

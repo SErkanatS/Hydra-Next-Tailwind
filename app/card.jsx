@@ -4,7 +4,7 @@ import React from 'react'
 function Card(props) {
   return (
       
-      <div className='flex flex-col w-[250px] md:w-[310px] items-center gap-3 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] p-5 md:p-12 rounded-[40px] shadow-2xl shadow-black '>
+      <div className='flex flex-col w-[250px] md:w-[310px] items-center gap-3 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] p-5 md:p-12 rounded-[40px] shadow-xl shadow-[#191919d2] '>
         <div className=' relative rounded-full border-[#0e0e0e52] border-8 w-[190px] h-[190px] overflow-hidden'>
           <Image src={props.img} fill sizes='100' alt='card' blurDataURL={props.img} />
         </div>
