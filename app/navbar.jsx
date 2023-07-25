@@ -37,7 +37,7 @@ function Navbar() {
         </div>
       </nav>
       {isOpen && (
-        <div className='lg:hidden flex gap-[40px] flex-col pb-[112px]'>
+        <div className='lg:hidden flex gap-[40px] flex-col pb-[112px] transition-opacity duration-1000'>
           <ul className='flex items-center gap-[40px] flex-col'>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>

@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Card from "./card";
-import { useState } from "react";
-
 
 export default function Home() {
   const cards = [
@@ -40,20 +38,20 @@ export default function Home() {
             <div className="flex flex-col justify-center">
               <button className=' uppercase py-4 px-9 rounded-full font-bold bg-gradient-to-r from-left to-right text-primary'>BUILD YOUR WORLD</button>
             </div>
-            <Image src={'/arrow-small-right.svg'} height={48} width={100} alt="arrow" className="hidden lg:block" />
+            <Image src={'/arrow-small-right.svg'} height={48} width={100} alt={"arrow"} className="hidden lg:block" />
           </div>
         </div>
         <div >
           <div className=" relative rounded-bl-[240px] rounded-tr-[100px] rounded-tl-[100px] rounded-br-[100px] shadow-2xl shadow-black 
            h-[284px] md:h-[355px] lg:h-[425px] w-[300px] md:w-[375px] lg:w-[480px] overflow-hidden ">
-            <Image src={'/main-section.png'} alt="photo" fill blurDataURL={'/main-section.png'} sizes="100" />
+            <Image src={'/main-section.png'} alt={"photo"} fill blurDataURL={'/main-section.png'} sizes="100" />
           </div>
         </div>
       </section>
       <section className=" py-12 lg:py-20">
         <div className=" flex justify-between  bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3a3456f2] to-[#211E2E] rounded-full py-6 px-12 md:p-12 shadow-2xl shadow-black overflow-x-scroll w-[80vw] mx-auto snap-x snap-mandatory no-scrollbar ">
           <div className=" flex items-center gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%]  lg:min-w-0 snap-center justify-center">
-            <Image src={'/location.svg'} height={65} width={65} alt="image" blurDataURL={'/location.svg'} />
+            <Image src={'/location.svg'} height={65} width={65} alt={"image"} blurDataURL={'/location.svg'} />
             <div>
               <h1 className=" font-bold text-xl">Pay Us a Visit</h1>
               <p className=" text-xs">Union St, Seattle, WA 98101, United States</p>
@@ -61,7 +59,7 @@ export default function Home() {
           </div>
           <div className=" hidden lg:block h-[120] w-0 border-[1px] border-white border-solid"></div>
           <div className=" flex items-center  gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%] lg:min-w-0 snap-center justify-center">
-            <Image src={'/phone.svg'} height={65} width={65} alt="image" blurDataURL={'/phone.svg'} />
+            <Image src={'/phone.svg'} height={65} width={65} alt={"image"} blurDataURL={'/phone.svg'} />
             <div>
               <h1 className="  font-bold text-xl">Give Us a Call</h1>
               <p className=" text-xs">(110) 1111-1010</p>
@@ -69,7 +67,7 @@ export default function Home() {
           </div>
           <div className=" hidden lg:block h-[120] w-0 border-[1px] border-white border-solid"></div>
           <div className=" flex items-center gap-2 min-w-[140%] mx-5 md:mx-0 md:min-w-[100%] lg:min-w-0 snap-center justify-center">
-            <Image src={'/mail.svg'} height={65} width={65} alt="image" />
+            <Image src={'/mail.svg'} height={65} width={65} alt={"image"} />
             <div>
               <h1 className=" font-bold text-xl">Send Us a Message</h1>
               <p className=" text-xs">Contact@HydraVTech.com</p>
@@ -83,7 +81,7 @@ export default function Home() {
             <h1 className=" text-3xl lg:text-5xl font-extrabold">INTRODUCTION</h1>
             <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start">
               <p>TO HYDRA VR</p>
-              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" blurDataURL={'/big-arrow-right.svg'} className=" hidden lg:block" />
+              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt={"arrow"} blurDataURL={'/big-arrow-right.svg'} className=" hidden lg:block" />
             </div>
           </div>
           <div className=" hidden lg:block h-min">
@@ -93,7 +91,7 @@ export default function Home() {
             <div className=" relative md:rounded-bl-[100px] md:rounded-tr-[100px] md:rounded-tl-[240px] md:rounded-br-[240px] 
             shadow-2xl shadow-black rounded-bl-[50px] rounded-tr-[50px] rounded-tl-[120px] rounded-br-[120px]
             md:h-[446px] md:w-[419px] h-[272px] w-[256px]  overflow-hidden ">
-              <Image src={'/section_2.png'} alt="photo" fill blurDataURL={'/section_2.png'} sizes="100" />
+              <Image src={'/section_2.png'} alt={"photo"} fill blurDataURL={'/section_2.png'} sizes="100" />
             </div>
           </div>
           <div className=" flex flex-col justify-around col-span-2 lg:col-span-1 gap-9">
@@ -118,7 +116,7 @@ export default function Home() {
             <h1 className=" text-3xl lg:text-5xl font-extrabold">WHY BUILD</h1>
             <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start">
               <p>WITH HYDRA?</p>
-              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" className="hidden lg:block" />
+              <Image src={'/big-arrow-right.svg'} width={228} height={30} alt={"arrow"} className="hidden lg:block" />
             </div>
           </div>
           <div className="pt-12 h-min hidden lg:block">
@@ -128,6 +126,7 @@ export default function Home() {
       </section>
       <section className=" xl:py-20 ">
         <div className=" hidden xl:flex lg:justify-between ">
+
           {
             cards.map((item) => (
               <div key={item.number}>
@@ -136,13 +135,14 @@ export default function Home() {
             ),)
           }
         </div>
-        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll  w-full">
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll  w-full ">
           {
             <>
               <div className=" flex py-4 min-w-[100%]  snap-center justify-center">
                 <Card img={`/card-${cards[0].number}.png`} title={cards[0].title} body={cards[0].body} button='Try it now' />
               </div>
-              <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+
+              <div className=" flex py-4 min-w-[100%] snap-center justify-center" >
                 <Card img={`/card-${cards[1].number}.png`} title={cards[1].title} body={cards[1].body} button='Try it now' />
               </div>
               <div className=" flex py-4 min-w-[100%] snap-center justify-center">
@@ -151,18 +151,19 @@ export default function Home() {
               <div className=" flex py-4 min-w-[100%] snap-center justify-center">
                 <Card img={`/card-${cards[3].number}.png`} title={cards[3].title} body={cards[3].body} button='Try it now' />
               </div>
+
             </>
           }
         </div>
       </section>
       <section className="relative pt-16 lg:pt-[114px] flex justify-center">
         <div className=" relative rounded-[160px]  w-[90%] h-[22.5vw] overflow-hidden">
-          <Image src={'/bg-image.png'} alt="photo" fill blurDataURL={'/bg-image.png'} sizes="100" />
+          <Image src={'/bg-image.png'} alt={"photo"} fill blurDataURL={'/bg-image.png'} sizes="100" />
           <p className=" absolute text-[10px] md:text-xl lg:text-4xl  text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-extralight"><span className=" font-extrabold">TECHNOLOGIES & HARDWARE</span><br />
             USED BY HYDRA VR.</p>
         </div>
         <button className=' absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 border-4 md:border-6 md:p-5 lg:p-7 rounded-full bg-gradient-to-r from-left to-right border-primary lg:border-8'>
-          <Image src={'/small-down.svg'} alt="photo" fill blurDataURL={'/bg-image.png'} sizes="20" />
+          <Image src={'/small-down.svg'} alt={"photo"} fill blurDataURL={'/bg-image.png'} sizes="20" />
         </button>
       </section>
       <section>
@@ -200,7 +201,7 @@ export default function Home() {
           <h1 className=" text-3xl lg:text-5xl font-extrabold">HOW WE BUILD</h1>
           <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start  ">
             <p className=" py-4 lg:py-0">WITH HYDRA VR?</p>
-            <Image className=" hidden lg:block" src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" blurDataURL={'/big-arrow-right.svg'} />
+            <Image className=" hidden lg:block" src={'/big-arrow-right.svg'} width={228} height={30} alt={"arrow"} blurDataURL={'/big-arrow-right.svg'} />
           </div>
         </div>
         <div className="text-center lg:text-start lg:w-1/2">
@@ -304,6 +305,43 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center pt-6 lg:py-16">
           <button className=' uppercase py-4 px-9 rounded-full w-[214px] font-bold bg-gradient-to-r from-left to-right text-primary'>SEND TO HYDRA</button>
         </div>
+      </section>
+      <section>
+        <div className=" flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:justify-between py-10 ">
+          <div className=" flex items-center">
+            <Image src={'/hydralogo.svg'} height={187} width={185} alt="logo" />
+          </div>
+          <div className="hidden lg:block h-[196px]  w-[2px] bg-gradient-to-b from-left to-right"></div>
+          <div className=" hidden lg:flex flex-col justify-between">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Technologies</a>
+            <a href="#">How To</a>
+            <a href="#">Join Hydra</a>
+          </div>
+          <div className="hidden lg:block h-[196px]  w-[2px] bg-gradient-to-b from-left to-right"></div>
+          <div className="hidden lg:flex flex-col justify-between">
+            <a href="#">F.A.Q</a>
+            <a href="#">SITEMAP</a>
+            <a href="#">CONDITIONS</a>
+            <a href="#">LICENSES</a>
+          </div>
+          <div className="hidden lg:block h-[196px]  w-[2px] bg-gradient-to-b from-left to-right"></div>
+          <div className="flex flex-col items-center gap-6  justify-between">
+            <h1>SOCIALIZE WITH HYDRA</h1>
+            <div className=" flex justify-between gap-5">
+              <Image src={'/facebook.svg'} height={32} width={32} alt="social" />
+              <Image src={'/twitter.svg'} height={32} width={32} alt="social" />
+              <Image src={'/linkedin.svg'} height={32} width={32} alt="social" />
+              <Image src={'/youtube.svg'} height={32} width={32} alt="social" />
+              <Image src={'/instagram.svg'} height={32} width={32} alt="social" />
+              <Image src={'/pinterest.svg'} height={32} width={32} alt="social" />
+            </div>
+            <button className=' uppercase py-4 px-9 rounded-full font-bold bg-gradient-to-r from-left to-right text-primary'>build your world</button>
+          </div>
+        </div>
+        <Image src={'/divider-h.svg'} width={1269} height={1} alt="divider" />
+        <h1 className="text-center py-4" >2023 © HYDRA LANDING PAGE BY ZINE. E. FALOUTI ALL RIGHTS RESERVED</h1>
       </section>
     </main>
   )
