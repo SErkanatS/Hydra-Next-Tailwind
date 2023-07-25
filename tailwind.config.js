@@ -28,6 +28,10 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
         
+      },
+      screens: {
+        'xl': '1440px',
+        // => @media (min-width: 640px) { ... }
       }
     },
   },

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Card from "./card";
+import { useState } from "react";
 
 
 export default function Home() {
@@ -28,6 +29,17 @@ export default function Home() {
     }
   ]
 
+  const [index, setIndex] = useState(0)
+
+  const next = () => {
+    index == 3 && setIndex(-1)
+    setIndex((prev) => prev + 1)
+  }
+
+  const previous = () => {
+    index == 0 && setIndex(3)
+    setIndex((prev) => prev - 1)
+  }
 
   return (
     <main className="">
@@ -114,7 +126,7 @@ export default function Home() {
             </div>
           </div>
           <div className=" text-4xl h-min pt-12 text-center lg:text-left lg:text-white col-span-2 lg:col-span-1">
-            <h1 className=" text-5xl font-extrabold">WHY BUILD</h1>
+            <h1 className=" text-3xl lg:text-5xl font-extrabold">WHY BUILD</h1>
             <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start">
               <p>WITH HYDRA?</p>
               <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" className="hidden lg:block" />
@@ -125,79 +137,158 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className=" flex justify-between pt-20">
-        {
-          cards.map((item) => (
+      <section className=" xl:py-20 ">
+        <div className=" hidden xl:flex lg:justify-between ">
+          {
+            cards.map((item) => (
+              <div className="">
+                <Card img={`/card-${item.number}.png`} title={item.title} body={item.body} button='Try it now' />
+
+              </div>
+            ),)
+          }
+        </div>
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+          {
             <>
-              <Card img={`/card-${item.number}.png`} title={item.title} body={item.body} button='Try it now' />
+              <div className=" flex py-4 min-w-[100%]  snap-center justify-center">
+                <Card img={`/card-${cards[0].number}.png`} title={cards[0].title} body={cards[0].body} button='Try it now' />
+              </div>
+              <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+                <Card img={`/card-${cards[1].number}.png`} title={cards[1].title} body={cards[1].body} button='Try it now' />
+              </div>
+              <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+                <Card img={`/card-${cards[2].number}.png`} title={cards[2].title} body={cards[2].body} button='Try it now' />
+              </div>
+              <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+                <Card img={`/card-${cards[3].number}.png`} title={cards[3].title} body={cards[3].body} button='Try it now' />
+              </div>
             </>
-          ),)
-        }
-      </section> */}
-      <section className="relative pt-[114px]">
-        <div className=" relative rounded-[160px] w-full h-[303px] overflow-hidden">
+          }
+        </div>
+      </section>
+      <section className="relative pt-16 lg:pt-[114px] flex justify-center">
+        <div className=" relative rounded-[160px]  w-[90%] h-[22.5vw] overflow-hidden">
           <Image src={'/bg-image.png'} alt="photo" fill blurDataURL={'/bg-image.png'} sizes="100" />
-          <p className=" absolute text-4xl  text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-extralight"><span className=" font-extrabold">TECHNOLOGIES & HARDWARE</span><br />
+          <p className=" absolute text-[10px] md:text-xl lg:text-4xl  text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center font-extralight"><span className=" font-extrabold">TECHNOLOGIES & HARDWARE</span><br />
             USED BY HYDRA VR.</p>
         </div>
-        <button className=' absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-7 rounded-full bg-gradient-to-r from-left to-right border-primary border-8'><Image src={'/small-down.svg'} alt="photo" fill blurDataURL={'/bg-image.png'} sizes="100" /></button>
+        <button className=' absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 border-4 md:border-6 md:p-5 lg:p-7 rounded-full bg-gradient-to-r from-left to-right border-primary lg:border-8'>
+          <Image src={'/small-down.svg'} alt="photo" fill blurDataURL={'/bg-image.png'} sizes="20" />
+        </button>
       </section>
-      <section className=" flex justify-around w-full h-fit items-center my-16">
-        <div className=" relative ">
-          <Image src={'/partner-4.png'} width={174} height={174} onBlur={'/partner-4.png'} sizes="100" />
+      <section>
+        <div className=" hidden xl:flex lg:justify-between justify-around w-full h-fit items-center my-16">
+          <div className=" relative ">
+            <Image src={'/partner-4.png'} width={174} height={174} onBlur={'/partner-4.png'} sizes="100" />
+          </div>
+          <div className=" relative ">
+            <Image src={'/partner-3.png'} width={252} height={252} onBlur={'/partner-3.png'} sizes="100" />
+          </div>
+          <div className=" relative ">
+            <Image src={'/partner-2.png'} width={263} height={263} onBlur={'/partner-2.png'} sizes="100" />
+          </div>
+          <div className=" relative ">
+            <Image src={'/partner-1.png'} width={282} height={282} onBlur={'/partner-1.png'} sizes="100" />
+          </div>
         </div>
-        <div className=" relative ">
-          <Image src={'/partner-3.png'} width={252} height={252} onBlur={'/partner-3.png'} sizes="100" />
-        </div>
-        <div className=" relative ">
-          <Image src={'/partner-2.png'} width={263} height={263} onBlur={'/partner-2.png'} sizes="100" />
-        </div>
-        <div className=" relative ">
-          <Image src={'/partner-1.png'} width={282} height={282} onBlur={'/partner-1.png'} sizes="100" />
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+          <div className=" relative flex py-4 min-w-[100%] snap-center justify-center">
+            <Image src={'/partner-4.png'} width={174} height={174} onBlur={'/partner-4.png'} sizes="100" />
+          </div>
+          <div className=" relative flex py-4 min-w-[100%] snap-center justify-center">
+            <Image src={'/partner-3.png'} width={252} height={252} onBlur={'/partner-3.png'} sizes="100" />
+          </div>
+          <div className=" relative flex py-4 min-w-[100%] snap-center justify-center">
+            <Image src={'/partner-2.png'} width={263} height={263} onBlur={'/partner-2.png'} sizes="100" />
+          </div>
+          <div className=" relative flex py-4 min-w-[100%] snap-center justify-center">
+            <Image src={'/partner-1.png'} width={282} height={282} onBlur={'/partner-1.png'} sizes="100" />
+          </div>
         </div>
       </section>
       <section className=" flex justify-between w-full my-16 flex-col items-center lg:flex-row">
         <div className=" text-4x lg:w-1/2">
-          <h1 className=" text-5xl font-extrabold">HOW WE BUILD</h1>
-          <div className=" flex font-normal items-center gap-8  ">
-            <p>WITH HYDRA VR?</p>
-            <Image src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" blurDataURL={'/big-arrow-right.svg'} />
+          <h1 className=" text-3xl lg:text-5xl font-extrabold">HOW WE BUILD</h1>
+          <div className=" flex font-normal items-center gap-8 justify-center lg:justify-start  ">
+            <p className=" py-4 lg:py-0">WITH HYDRA VR?</p>
+            <Image className=" hidden lg:block" src={'/big-arrow-right.svg'} width={228} height={30} alt="arrow" blurDataURL={'/big-arrow-right.svg'} />
           </div>
         </div>
-        <div className="lg:w-1/2">
+        <div className="text-center lg:text-start lg:w-1/2">
           <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
         </div>
       </section>
-      {/* <section className="flex justify-between">
-        <div className=" flex flex-col items-center">
-          <Image src={'/01.svg'} width={198} height={198} />
-          <div className=" flex items-center font-extrabold text-xl">
-            <Image src={'/arrow-small-right.svg'} width={67} height={67} />
-            <span className=" font-extrabold text=[24px]">3D Conception & Design</span>
+      <section className="flex justify-between">
+        <div className=" hidden xl:flex lg:justify-between justify-around w-full h-fit items-center my-16">
+          <div className=" flex flex-col items-center">
+            <Image src={'/01.svg'} width={198} height={198} />
+            <div className=" flex items-center font-extrabold text-xl">
+              <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+              <span className=" font-extrabold text=[24px]">3D Conception & Design</span>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center">
+            <Image src={'/02.svg'} width={198} height={198} />
+            <div className=" flex items-center font-extrabold text-xl">
+              <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+              <span className=" font-extrabold text=[24px]">Interaction Design</span>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center">
+            <Image src={'/03.svg'} width={198} height={198} />
+            <div className=" flex items-center font-extrabold text-xl">
+              <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+              <span className=" font-extrabold text=[24px]">VR World User Testing</span>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center">
+            <Image src={'/04.svg'} width={198} height={198} />
+            <div className=" flex items-center font-extrabold text-xl">
+              <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+              <span className=" font-extrabold text=[24px]">Hydra VR Deploy</span>
+            </div>
           </div>
         </div>
-        <div className=" flex flex-col items-center">
-          <Image src={'/02.svg'} width={198} height={198} />
-          <div className=" flex items-center font-extrabold text-xl">
-            <Image src={'/arrow-small-right.svg'} width={67} height={67} />
-            <span className=" font-extrabold text=[24px]">Interaction Design</span>
+        <div className=" xl:hidden flex justify-between snap-x py-12 items-center snap-mandatory no-scrollbar overflow-x-scroll w-[100vw]">
+          <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+            <div className=" flex flex-col items-center">
+              <Image src={'/01.svg'} width={198} height={198} />
+              <div className=" flex items-center font-extrabold text-xl">
+                <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+                <span className=" font-extrabold text-sm lg:text-[24px]">3D Conception & Design</span>
+              </div>
+            </div>
+          </div>
+          <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+            <div className=" flex flex-col items-center">
+              <Image src={'/02.svg'} width={198} height={198} />
+              <div className=" flex items-center font-extrabold text-xl">
+                <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+                <span className=" font-extrabold text-sm lg:text-[24px]">Interaction Design</span>
+              </div>
+            </div>
+          </div>
+          <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+            <div className=" flex flex-col items-center">
+              <Image src={'/03.svg'} width={198} height={198} />
+              <div className=" flex items-center font-extrabold text-xl">
+                <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+                <span className=" font-extrabold text-sm lg:text-[24px]">VR World User Testing</span>
+              </div>
+            </div>
+          </div>
+          <div className=" flex py-4 min-w-[100%] snap-center justify-center">
+            <div className=" flex flex-col items-center">
+              <Image src={'/04.svg'} width={198} height={198} />
+              <div className=" flex items-center font-extrabold text-xl">
+                <Image src={'/arrow-small-right.svg'} width={67} height={67} />
+                <span className=" font-extrabold text-sm lg:text-[24px]">Hydra VR Deploy</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div className=" flex flex-col items-center">
-          <Image src={'/03.svg'} width={198} height={198} />
-          <div className=" flex items-center font-extrabold text-xl">
-            <Image src={'/arrow-small-right.svg'} width={67} height={67} />
-            <span className=" font-extrabold text=[24px]">VR World User Testing</span>
-          </div>
-        </div>
-        <div className=" flex flex-col items-center">
-          <Image src={'/04.svg'} width={198} height={198} />
-          <div className=" flex items-center font-extrabold text-xl">
-            <Image src={'/arrow-small-right.svg'} width={67} height={67} />
-            <span className=" font-extrabold text=[24px]">Hydra VR Deploy</span>
-          </div>
-        </div>
-      </section> */}
+      </section>
       <section className=" mt-[10vh] py-6 px-6 lg:px-[107px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#403A5F] to-[#211E2E] shadow-inner rounded-[40px] w-[90vw] mx-auto" id="contact">
         <div className=" flex flex-col items-center gap-8 text-4xl lg:p-16 text-center overflow-hidden">
           <span className=" font-extrabold ">JOIN HYDRA</span>
